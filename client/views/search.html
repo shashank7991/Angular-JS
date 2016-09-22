@@ -1,0 +1,37 @@
+<div class="search-header">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4">
+
+        <form>
+          <h2 class="v-center">search</h2>
+          <p class="lead">Find the tv show:</p>
+
+          <div class="input-group">
+            <input type="text" class="form-control input-md" ng-model="sname"/>
+            <span class="input-group-btn">
+            	<button type="submit" class="btn btn-md btn-warning pull-right" ng-click="findshows()">
+            		search
+            	</button>
+            </span>
+          </div>
+          <p ng-show="disp.length === 0">
+          <i>* no results found</i>
+          </p>
+        </form>
+
+        <div ng-if="disp.length" class="more-results-block" style = "width:1100px">
+          <p>
+            /// more results
+            <hr/>
+          </p>
+          <div result></div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
